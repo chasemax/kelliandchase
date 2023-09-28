@@ -41,7 +41,7 @@ export default function Index() {
       <div className="px-5 mt-10">
         <h1 className="font-serif font-extrabold text-4xl">Hey Kelli.</h1>
         <p className="mt-2">I made a sweet website for us.</p>
-        <p>Tell me that's not the most romantic, nerdy thing you've ever heard of.</p>
+        <p>Tell me that&apos;s not the most romantic, nerdy thing you&apos;ve ever heard of.</p>
       </div>
       
       <div className="relative h-96">
@@ -54,7 +54,7 @@ export default function Index() {
         </div>
         <div className="absolute right-10 top-40 w-48 text-right">
           <h1 className="font-serif font-extrabold text-4xl">{daysUntilMeet()} days.</h1>
-          <p className="mt-2">That's how long until we get to meet in person again!</p>
+          <p className="mt-2">That&apos;s how long until we get to meet in person again!</p>
         </div>
       </div>
 
@@ -67,7 +67,7 @@ export default function Index() {
           />
         </div>
         <h1 className="font-serif font-extrabold text-4xl">Nice photos.</h1>
-        <p>We're too cute.</p>
+        <p>We&apos;re too cute.</p>
         <Carousel slide={true} slideInterval={5000} className="h-96">
           <Image
             src="/img/carousel/photo_3.png"
@@ -136,31 +136,31 @@ export default function Index() {
 
       <div className="flex flex-col gap-4 items-center mt-16 p-5" id="date-ideas">
         <h1 className="font-serif font-extrabold text-4xl">Date ideas.</h1>
-        <p>Or anytime we're feeling bored. We can make this fun!</p>
+        <p>Or anytime we&apos;re feeling bored. We can make this fun!</p>
         <Accordion className="w-full">
           <Accordion.Panel>
             <Accordion.Title className="font-serif">GamePigeon</Accordion.Title>
-            <Accordion.Content>This one's a classic. We've got the dots game, penguin brawl, anagrams, you name it.</Accordion.Content>
+            <Accordion.Content>This one&apos;s a classic. We&apos;ve got the dots game, penguin brawl, anagrams, you name it.</Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title className="font-serif">BoardGameArena</Accordion.Title>
-            <Accordion.Content>Maybe a step up from GamePigeon. Our favorite currently is Concept... because that's the only one we've played...</Accordion.Content>
+            <Accordion.Content>Maybe a step up from GamePigeon. Our favorite currently is Concept... because that&apos;s the only one we&apos;ve played...</Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title className="font-serif">Playlist Making</Accordion.Title>
-            <Accordion.Content>What's the vibe? Throwback? Dance party? Sunday music?? The possibilities are endless.</Accordion.Content>
+            <Accordion.Content>What&apos;s the vibe? Throwback? Dance party? Sunday music?? The possibilities are endless.</Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title className="font-serif">Remote Baking</Accordion.Title>
-            <Accordion.Content>Those chocolate cookies were amazing, I need more. Let's make something!</Accordion.Content>
+            <Accordion.Content>Those chocolate cookies were amazing, I need more. Let&apos;s make something!</Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title className="font-serif">Yoga</Accordion.Title>
-            <Accordion.Content>I'm feeling stretchy, are you? Honesly this would probably be good for both of us.</Accordion.Content>
+            <Accordion.Content>I&apos;m feeling stretchy, are you? Honesly this would probably be good for both of us.</Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title className="font-serif">Bob Ross Paint Night</Accordion.Title>
-            <Accordion.Content>This guy is iconic. It's like our oragami night, but a little more messy.</Accordion.Content>
+            <Accordion.Content>This guy is iconic. It&apos;s like our oragami night, but a little more messy.</Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title className="font-serif">Zillow House Hunting</Accordion.Title>
@@ -177,8 +177,8 @@ export default function Index() {
       <div className="flex flex-col gap-4 items-center mt-20 p-5 bg-dark-indigo">
         <p className="text-purple-cream mb-10">
             Kelli - <br/>
-            Okay, the website is a little silly. And my design skills could definitely use some work. And I 100% copied the date list from our shared note, so not a lot of original content there besides my commentary. But I hope we can use this when we're missing each other and just need a little pick me up! <br/>
-            I'm SO GLAD that we took the leap to date long distance. It's been an amazing ride so far, and there is no one else I would rather have spent it with! I'm excited for the days, months, and years to come! <br/>
+            Okay, the website is a little silly. And my design skills could definitely use some work. And I 100% copied the date list from our shared note, so not a lot of original content there besides my commentary. But I hope we can use this when we&apos;re missing each other and just need a little pick me up! <br/>
+            I&apos;m SO GLAD that we took the leap to date long distance. It&apos;s been an amazing ride so far, and there is no one else I would rather have spent it with! I&apos;m excited for the days, months, and years to come! <br/>
             I love you! <br/>
             - Chase
         </p>
