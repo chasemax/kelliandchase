@@ -1,0 +1,6 @@
+COLOR PALLETTE:
+#494676 (dark indigo)
+#e45485 (pink)
+#eb8db3 (light pink)
+#eedfea (purple cream)
+#2a3147 (grey-black)

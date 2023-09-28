@@ -1,113 +1,189 @@
-import Image from 'next/image'
+"use client"
 
-export default function Home() {
+import { differenceInCalendarDays, startOfToday } from "date-fns";
+import { Carousel } from "flowbite-react";
+import { Accordion } from "flowbite-react";
+import Image from "next/image";
+
+export default function Index() {
+
+  const daysUntilMeet = function () {
+    return differenceInCalendarDays(new Date(2023, 9, 13), startOfToday());
+  }
+  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <div className="container max-w-lg flex flex-col">
+      <div className="bg-dark-indigo h-32 flex flex-row justify-between items-center px-4">
+        <div className="">
+          <Image
+            src="/img/logo.png"
+            alt="logo"
+            width={125}
+            height={0}
+          />
+        </div>
+        <div className="flex flex-row gap-2 justify-end">
+          <a className="bg-gradient-to-tr from-hot-pink to-light-pink rounded-full text-dark-indigo py-2 px-3 font-serif w-fit h-fit" href="#cute-pics">
+          Cute pics
+          </a>
+          <a className="bg-gradient-to-tr from-hot-pink to-light-pink rounded-full text-dark-indigo py-2 px-3 font-serif w-fit h-fit" href="#date-ideas">
+            Date ideas
           </a>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="relative w-full h-96">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/img/page_top.png"
+          alt="top image"
+          fill={true}
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="px-5 mt-10">
+        <h1 className="font-serif font-extrabold text-4xl">Hey Kelli.</h1>
+        <p className="mt-2">I made a sweet website for us.</p>
+        <p>Tell me that's not the most romantic, nerdy thing you've ever heard of.</p>
       </div>
-    </main>
+      
+      <div className="relative h-96">
+        <div className="absolute w-48 h-96">
+          <Image
+            src="/img/sidething_export.svg"
+            alt="side image 1"
+            fill={true}
+          />          
+        </div>
+        <div className="absolute right-10 top-40 w-48 text-right">
+          <h1 className="font-serif font-extrabold text-4xl">{daysUntilMeet()} days.</h1>
+          <p className="mt-2">That's how long until we get to meet in person again!</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-4 p-5" id="cute-pics">
+        <div className="absolute right-0 translate-y-72 w-36 h-96">
+          <Image
+            src="/img/sidething2_export.svg"
+            alt="side image 2"
+            fill={true}
+          />
+        </div>
+        <h1 className="font-serif font-extrabold text-4xl">Nice photos.</h1>
+        <p>We're too cute.</p>
+        <Carousel slide={true} slideInterval={5000} className="h-96">
+          <Image
+            src="/img/carousel/photo_3.png"
+            alt="..."
+            width={600}
+            height={800}
+          />
+          <Image
+            src="/img/carousel/photo_4.png"
+            alt="..."
+            width={600}
+            height={800}
+          />
+          <Image
+            src="/img/carousel/photo_6.png"
+            alt="..."
+            width={600}
+            height={800}
+          />
+          <Image
+            src="/img/carousel/photo_7.png"
+            alt="..."
+            width={600}
+            height={800}
+          />
+          <Image
+            src="/img/carousel/photo_8.png"
+            alt="..."
+            width={600}
+            height={800}
+          />
+        </Carousel>
+        <Carousel slide={true} slideInterval={5000} className="h-64">
+          <Image
+            src="/img/carousel/photo_2.png"
+            alt="..."
+            width={800}
+            height={600}
+          />
+          <Image
+            src="/img/carousel/photo_5.png"
+            alt="..."
+            width={800}
+            height={600}
+          />
+          <Image
+            src="/img/carousel/photo_9.png"
+            alt="..."
+            width={800}
+            height={600}
+          />
+          <Image
+            src="/img/carousel/photo_10.png"
+            alt="..."
+            width={800}
+            height={600}
+          />
+          <Image
+            src="/img/carousel/photo_1.png"
+            alt="..."
+            width={800}
+            height={600}
+          />
+        </Carousel>
+      </div>
+
+      <div className="flex flex-col gap-4 items-center mt-16 p-5" id="date-ideas">
+        <h1 className="font-serif font-extrabold text-4xl">Date ideas.</h1>
+        <p>Or anytime we're feeling bored. We can make this fun!</p>
+        <Accordion className="w-full">
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">GamePigeon</Accordion.Title>
+            <Accordion.Content>This one's a classic. We've got the dots game, penguin brawl, anagrams, you name it.</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">BoardGameArena</Accordion.Title>
+            <Accordion.Content>Maybe a step up from GamePigeon. Our favorite currently is Concept... because that's the only one we've played...</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">Playlist Making</Accordion.Title>
+            <Accordion.Content>What's the vibe? Throwback? Dance party? Sunday music?? The possibilities are endless.</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">Remote Baking</Accordion.Title>
+            <Accordion.Content>Those chocolate cookies were amazing, I need more. Let's make something!</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">Yoga</Accordion.Title>
+            <Accordion.Content>I'm feeling stretchy, are you? Honesly this would probably be good for both of us.</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">Bob Ross Paint Night</Accordion.Title>
+            <Accordion.Content>This guy is iconic. It's like our oragami night, but a little more messy.</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">Zillow House Hunting</Accordion.Title>
+            <Accordion.Content>We might have a practical use for this in our future... hehe...</Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="font-serif">Short Story Reading</Accordion.Title>
+            <Accordion.Content>Spooky, romantic, exciting, thought provoking! You can get all the feels with this one.</Accordion.Content>
+          </Accordion.Panel>
+        </Accordion>
+          
+      </div>
+
+      <div className="flex flex-col gap-4 items-center mt-20 p-5 bg-dark-indigo">
+        <p className="text-purple-cream mb-10">
+            Kelli - <br/>
+            Okay, the website is a little silly. And my design skills could definitely use some work. And I 100% copied the date list from our shared note, so not a lot of original content there besides my commentary. But I hope we can use this when we're missing each other and just need a little pick me up! <br/>
+            I'm SO GLAD that we took the leap to date long distance. It's been an amazing ride so far, and there is no one else I would rather have spent it with! I'm excited for the days, months, and years to come! <br/>
+            I love you! <br/>
+            - Chase
+        </p>
+      </div>
+      
+    </div>
   )
 }
